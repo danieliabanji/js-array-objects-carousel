@@ -1,0 +1,85 @@
+/********************* Utility **********************/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.carousel-container {
+    position: relative;
+}
+
+.title-image {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    text-align: right;
+    color: rgb(255, 255, 255);
+    display: none;
+}
+.my_text_shadow{
+    text-shadow: 5px 3px 3px rgba(0,0,0,0.6);
+}
+.title-image.active{
+    display: inline-block;
+
+}
+.description-image{
+    font-size: 20px;
+    margin-top: 500px;
+
+}
+
+.carousel-images {
+    position: relative;
+    height: 70vh;
+}
+
+.carousel-images .carousel-img {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: none;
+}
+
+.carousel-thumbs {
+    display: flex;
+    height: 150px;
+}
+
+.carousel-thumbs .carousel-img.active {
+    border: 3px solid rgba(68, 5, 68, 0.699);
+    opacity: 1;
+}
+
+
+.carousel-thumbs .carousel-img {
+    width: calc(100% / 5);
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.5;
+}
+
+.carousel-img.active {
+    display: inline-block;
+}
+
+.carousel-navigation {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.carousel-navigation button {
+    margin: 0 5px;
+    font-size: 3rem;
+    color: white;
+    border: transparent;
+    background-color: transparent;
+}

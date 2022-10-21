@@ -34,3 +34,27 @@ function invertiParola(parola){
     return parolaInversa;
 }
 
+
+
+function addElementClassHTML(tagElement, className, fatherElement){
+    const tag = document.createElement(tagElement);
+    tag.className = className;
+    fatherElement.append(tag);
+    return tag;
+}
+
+
+function stampaImg(){
+    for(let value of images){
+        const col=document.createElement('div');
+        col.classList.add('col-12');
+        for(let key in value){
+            console.log(key);
+           col.innerHTML=`
+           <img src="${value.url}" alt="${value.title}">
+           `
+           document.querySelector('.row').append(col);
+        }
+     }
+   
+}
